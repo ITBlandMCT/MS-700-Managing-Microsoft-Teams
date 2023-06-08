@@ -640,11 +640,11 @@ You have now created a new custom app set up policy.
 
 2. Select **Sales team** app setup policy.
 
-3. Select **Assign users**.
+3. Select **Manage users** > **Assign users**.
 
 4. In the **Manage users** pane, search for **Alex Wilber**, and then select **Add**.
 
-5. Select **Apply**.
+5. Select **Apply** > **Confirm**.
 
  
 ### **Exercise 5: Test configured policy settings**
