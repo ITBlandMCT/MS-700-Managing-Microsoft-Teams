@@ -240,45 +240,59 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 		- Microsoft Teams PowerShell: ```Install-Module -Name MicrosoftTeams```
 
+        or:
+   
 		- Microsoft Graph PowerShell: ```Install-Module -Name Microsoft.Graph```
-
+   
+        and:
+   
   		- Microsoft Graph Beta PowerShell: ```Install-Module -Name Microsoft.Graph.Beta```
+   
 
-	- Enter **Y** and press **Enter** twice to confirm the installation of the NuGet provider and Untrusted repository.
+	- Enter **Y** and press **Enter** to confirm the installation of the NuGet provider (if needed) and the Untrusted repository.
 
-    **Note**: Installing all Microsoft Graph sub modules in PowerShell 5.1 takes a very long time and will appear to "stall"; please wait for the prompt to return before continuing to the next step.
+    **Note**: Installing all Microsoft Graph (and Graph beta) sub modules in PowerShell 5.1 takes a very long time and will appear to "stall"; please wait for the prompt to return before continuing to the next step.
 
-4. Connect to your tenant.
+5. Connect to your tenant.
 
-	- Enter the following cmdlets in the PowerShell window and press **Enter** after each:
+	- Enter the following cmdlet in the PowerShell window and press **Enter**:
 
 		- Microsoft Teams PowerShell: ```Connect-MicrosoftTeams```
 
+       or:
+   
 		- Microsoft Graph PowerShell: ```Connect-MgGraph```
 
 	- In the Sign-in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	- When the sign-in is successful, information about the signed-in user and the tenant are displayed.
 
-5. Explore **Microsoft Teams PowerShell module**
+6. Explore **Microsoft Teams PowerShell module**
 
 	- To confirm the Microsoft Teams module is loaded correctly, enter the following cmdlet and press **Enter** to view all available PowerShell modules: ```Get-Module```
    
-    - To see all Microsoft Graph PowerShell sub modules: ```Get-Module -Name Microsoft.Graph -ListAvailable```
+       - To see only Microsoft Teams PowerShell: ```Get-Module -Name MicrosoftTeams```
+	
+	   - To see all Microsoft Graph PowerShell sub modules: ```Get-Module -Name Microsoft.Graph -ListAvailable```
 
-    - To see only Microsoft Teams PowerShell: ```Get-InstalledModule -Name MicrosoftTeams```
+	   **Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
 
-
-		**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
-
-	- To get an overview of the available Teams PowerShell cmdlets from the MicrosoftTeams module, enter the following cmdlet and then press **Enter**:
+	- To get an overview of the available Teams PowerShell cmdlets from the Microsoft Teams module, enter the following cmdlet and then press **Enter**:
 
 		- Microsoft Teams PowerShell: ```Get-Command -Module MicrosoftTeams```
+
+        or:
    
    		- Microsoft Graph PowerShell: ```Get-Command -Module Microsoft.Graph.Teams```
    
 
-	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**: ```Get-Help New-Team```
+	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
+        
+		- Microsoft Teams PowerShell: ```Get-Help New-Team```
+
+        or:
+   
+   		- Microsoft Graph PowerShell: ```Get-Help New-MgTeam```
 
 		**Note**: If you receive a message to update the help libraries, type **Y** for yes.
 
@@ -286,9 +300,11 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 		- Microsoft Teams PowerShell - ```Disconnect-MicrosoftTeams```
 
+        or:
+
 		- Microsoft Graph PowerShell - ```Disconnect-MgGraph```
 
-6. Close the PowerShell window and continue to the next task.
+7. Close the PowerShell window and continue to the next task.
 
 You have successfully used the Microsoft Teams PowerShell module to connect to Teams and explored available cmdlets.
 
@@ -328,11 +344,11 @@ You will create a new Microsoft 365 Group named “IT-Department”, and then ad
 
 		- Select **+ Add Members**, and add the following users:
 
-			- Patti Fernandez
-
 			- Allan Deyoung
 
 			- MOD Administrator
+  
+   			- Patti Fernandez
 
 		- Select **Add(3)**, and then select **Next**.
 
@@ -377,15 +393,15 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 4. In the Teams desktop client, select **Teams and channels** from the left menu.
 
-5. Select **Create team** > Enter the team name **Teams Rollout** > Enter anything you want for **Description** > Set Team type to**Public** > Type **Teams Rollout** for ** First channel name**. Select  **Create**.
+5. Select **Create team** > Enter the team name **Teams Rollout** > Enter anything you want for **Description** > Set Team type to **Public** > Type **Teams Rollout** for **First channel name**. Select  **Create**.
 
 6. On the **Add members to Teams Rollout** window, enter the following names and select **Add**.
+
+	- Diego Siciliani
 
 	- Joni Sherman
 
 	- Lynne Robbins
-
-	- Diego Siciliani
 
 7. In the left navigation pane, expand **Teams and channels**. Next to **Teams Rollout**, select the ellipsis (…), and then select **Manage team**.
 
@@ -403,7 +419,7 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the **Stay signed in ?** window, select **No**.
 
-4. In the left navigation pane, select the ellipsis (…) next to **Teams and channels**, and then select **Your teams and channels**
+4. In the left navigation pane, select the ellipsis (**…**) next to **Teams and channels**, and then select **Your teams and channels**
 
 5. Select **Create team** > Enter **Sales** for **Team name** > Enter anything you want for **Description** > Select Team type to **Private** > Enter **Sales** for **First channel name**. Select **Create**.
 
@@ -478,8 +494,9 @@ You are an administrator for your Team’s organization. You need to limit which
 
 		- Members: Select **View all and manage members** > **+ Add members**, and add the following users:
 
-			- Joni Sherman
 			- Alex Wilber
+			- Joni Sherman
+
 
 Restrict the Microsoft 365 groups creation to the security group.
    
@@ -487,54 +504,51 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
 
 4. Open **Windows PowerShell** and run as Administrator.
 
-5. Install the **Microsoft Graph Beta** module. Enter `Y` and press **Enter**
-   to confirm installation from an untrusted repository.
+5. Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
 
-```powershell
-    Install-Module Microsoft.Graph.Beta
-```
-
-6. Connect to Microsoft Graph with the required scopes. Sign in as
-   **MOD Administrator**(admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
-```powershell
-    Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
-```
+   ```powershell
+       Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
+   ```
 	
-7. Load the unified group directory setting template:
-```powershell
-   $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
-```  
+6. Load the unified group directory setting template:
 
-8. Check whether a directory setting already exists for this template. If not,
-    create one:
-```powershell
-    $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
-    if (-not $Setting) {
-        $Setting = New-MgBetaDirectorySetting -TemplateId $Template.Id
-    }
-```
+   ```powershell
+       $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
+   ```  
 
-9. Configure the group creation restriction and assign the **GroupCreators**
-    group as the only permitted group:
-```powershell
-    $params = @{
-        Values = @(
-            @{ Name = "EnableGroupCreation"; Value = "false" }
-            @{ Name = "GroupCreationAllowedGroupId"; Value = (Get-MgGroup -Filter "displayName eq 'GroupCreators'").Id }
-        )
-    }
-    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
-```
+7. Check whether a directory setting already exists for this template. If not, create one:
+
+   ```powershell
+       $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
+       if (-not $Setting) {
+           $Setting = New-MgBetaDirectorySetting -TemplateId $Template.Id
+       }
+   ```
+
+8. Configure the group creation restriction and assign the **GroupCreators** group as the only permitted group:
+
+   ```powershell
+       $params = @{
+           Values = @(
+               @{ Name = "EnableGroupCreation"; Value = "false" }
+               @{ Name = "GroupCreationAllowedGroupId"; Value = (Get-MgGroup -Filter "displayName eq 'GroupCreators'").Id }
+           )
+       }
+       Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+   ```
 	
-10. Review the applied settings and confirm the values are correct:
-```powershell
-    (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
-```
-Verify that the output shows:
--  **EnableGroupCreation** → false
--  **GroupCreationAllowedGroupId** → populated with a GUID
+9. Review the applied settings and confirm the values are correct:
 
-11. Test the newly configured settings.
+   ```powershell
+       (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+   ```
+   
+   Verify that the output shows:
+   
+    -  **EnableGroupCreation** → false
+    -  **GroupCreationAllowedGroupId** → populated with a GUID
+
+10. Test the newly configured settings.
 
     1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -543,42 +557,48 @@ Verify that the output shows:
     3. Test as **Lynne Robbins** from Teams web client, follow the same steps as the steps above, notice only one option **Join team** is available.
 
         > [!NOTE]
-		> When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
+		> If you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 Revert the change for enabling users to create new teams.
 
-12. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+11. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
-13. Load the existing directory setting:
+12. Load the existing directory setting:
 
-```powershell
-    $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
-```  
+   ```powershell
+       $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
+   ```  
  
-14.	Reset group creation to allow all users:
+13.	Reset group creation to allow all users:
 
-```powershell
-$params = @{
-        Values = @(
-            @{ Name = "EnableGroupCreation"; Value = "true" }
-            @{ Name = "GroupCreationAllowedGroupId"; Value = "" }
-        )
-    }
-    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
-```  
-15. Verify the revert was applied:
-```powershell
-(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
-```  
+   ```powershell
+   $params = @{
+           Values = @(
+               @{ Name = "EnableGroupCreation"; Value = "true" }
+               @{ Name = "GroupCreationAllowedGroupId"; Value = "" }
+           )
+   }
+   Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+   ```
 
-Verify that **EnableGroupCreation** is now **true** and **GroupCreationAllowedGroupId** is empty.
+14. Verify the reverted settings were applied:
 
-16. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
-```powershell
-Disconnect-MgGraph
-```
+   ```powershell
+   (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+   ```  
+
+   Verify that the output now shows:
+   
+   -  **EnableGroupCreation** → true
+   -  **GroupCreationAllowedGroupId** → is empty.
+
+15. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
+
+   ```powershell
+   Disconnect-MgGraph
+   ```
 	
-17. Close the PowerShell window and continue to the next task.
+16. Close the PowerShell window and continue to the next task.
 
 In this task, you created a security group and configured directory settings to restrict the creation of new Microsoft 365 groups to members of that group only. You tested the restriction with two users and then reverted the configuration.
 
@@ -598,7 +618,7 @@ As part of your Teams planning project, you will configure the naming policy whe
     
     2. Navigate and right-select the downloaded file **BlockedWords.csv** and select **Open with** > **Notepad**.
 
-    3. Type *CEO,Payroll,HR* replacing the empty quotes in the Notepad window, and saving the file. 
+    3. Type **CEO,Payroll,HR** (replacing the empty quotes in the Notepad window), and save the file. 
     
     4. Back to the **Groups | Naming policy** page, upload the saved .csv file under **3. Upload your .csv file** by selecting **Select a file** box or the folder icon.
 
@@ -617,7 +637,7 @@ As part of your Teams planning project, you will configure the naming policy whe
     3. Add **Country or region** string as the suffix 
         
         1. Select the dropdown menu of **Select the type of suffix**, choose **String**, and enter **_** to the text box. 
-	2. Select the checkbox **Add suffix**. 
+	    2. Select the checkbox **Add suffix**. 
         3. Select the dropdown menu of **Select another suffix**, choose **Attribute**, and Select **Country or region** from the dropdown menu. 
         
     4. Select **Save** to apply the new blocked words setting.
