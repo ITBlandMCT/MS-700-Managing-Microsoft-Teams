@@ -236,48 +236,57 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 3. Install **Microsoft Teams PowerShell module**
 
-	- In the PowerShell window, enter the following cmdlet and press **Enter:**
+	- In the PowerShell window, enter the following cmdlets and press **Enter** after each:
 
-		- Microsoft PowerShell: Install-Module -Name MicrosoftTeams
-		- Microsoft Graph PowerShell: Install-Module -Name Microsoft.Graph and Install-Module -Name Microsoft.Graph.Beta
+		- Microsoft Teams PowerShell: ```Install-Module -Name MicrosoftTeams```
+
+		- Microsoft Graph PowerShell: ```Install-Module -Name Microsoft.Graph```
+
+  		- Microsoft Graph Beta PowerShell: ```Install-Module -Name Microsoft.Graph.Beta```
 
 	- Enter **Y** and press **Enter** twice to confirm the installation of the NuGet provider and Untrusted repository.
 
+    **Note**: Installing all Microsoft Graph sub modules in PowerShell 5.1 takes a very long time and will appear to "stall"; please wait for the prompt to return before continuing to the next step.
+
 4. Connect to your tenant.
 
-	- Enter the following cmdlet in the PowerShell window and press **Enter**:
+	- Enter the following cmdlets in the PowerShell window and press **Enter** after each:
 
-		- Microsoft PowerShell: Connect-MicrosoftTeams
-		- Microsoft Graph PowerShell: Connect-MgGraph
+		- Microsoft Teams PowerShell: ```Connect-MicrosoftTeams```
+
+		- Microsoft Graph PowerShell: ```Connect-MgGraph```
 
 	- In the Sign-in window, sign in as the Teams admin - Joni Sherman (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	- When the sign-in was successful, several information about the signed-in user and the tenant are displayed.
+	- When the sign-in is successful, information about the signed-in user and the tenant are displayed.
 
 5. Explore **Microsoft Teams PowerShell module**
 
-	- To confirm the MicrosoftTeams module is loaded correctly, enter the following cmdlet and press **Enter** to view all available PowerShell modules:
+	- To confirm the Microsoft Teams module is loaded correctly, enter the following cmdlet and press **Enter** to view all available PowerShell modules: ```Get-Module```
+   
+    - To see all Microsoft Graph PowerShell sub modules: ```Get-Module -Name Microsoft.Graph -ListAvailable```
 
-		- Microsoft PowerShell - ```Get-Module```
-		-Microsoft Graph PowerShell - ```Get-Module -Name Microsoft.Graph -ListAvailable``` or ```Get-Module -Name MicrosoftTeams```
+    - To see only Microsoft Teams PowerShell: ```Get-InstalledModule -Name MicrosoftTeams```
+
 
 		**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
 
 	- To get an overview of the available Teams PowerShell cmdlets from the MicrosoftTeams module, enter the following cmdlet and then press **Enter**:
 
-		-Microsoft PowerShell - ```Get-Command -Module MicrosoftTeams```
-   		-Microsoft Graph PowerShell - ```Get-Command -Module Microsoft.Graph.Teams```
+		- Microsoft Teams PowerShell: ```Get-Command -Module MicrosoftTeams```
+   
+   		- Microsoft Graph PowerShell: ```Get-Command -Module Microsoft.Graph.Teams```
+   
 
-	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
-
-		```Get-Help New-Team```
+	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**: ```Get-Help New-Team```
 
 		**Note**: If you receive a message to update the help libraries, type **Y** for yes.
 
 	- Disconnect from the Microsoft Teams environment.
 
-		- Microsoft PowerShell - ```Disconnect-MicrosoftTeams```
-		-Microsoft Graph PowerShell - ```Disconnect-MgGraph```
+		- Microsoft Teams PowerShell - ```Disconnect-MicrosoftTeams```
+
+		- Microsoft Graph PowerShell - ```Disconnect-MgGraph```
 
 6. Close the PowerShell window and continue to the next task.
 
