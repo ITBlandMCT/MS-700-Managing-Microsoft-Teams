@@ -504,19 +504,26 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
 
 4. Open **Windows PowerShell** and run as Administrator.
 
-5. Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+5. If you did not install the **Microsoft Graph Beta** module earlier, do so now. Run the following cmdlet and enter `Y` and press **Enter**
+   to confirm installation from an untrusted repository.
+
+   ```powershell
+    Install-Module Microsoft.Graph.Beta
+   ```
+
+6. Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
 
    ```powershell
        Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
    ```
 	
-6. Load the unified group directory setting template:
+7. Load the unified group directory setting template:
 
    ```powershell
        $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
    ```  
 
-7. Check whether a directory setting already exists for this template. If not, create one:
+8. Check whether a directory setting already exists for this template. If not, create one:
 
    ```powershell
        $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
@@ -525,7 +532,7 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
        }
    ```
 
-8. Configure the group creation restriction and assign the **GroupCreators** group as the only permitted group:
+9. Configure the group creation restriction and assign the **GroupCreators** group as the only permitted group:
 
    ```powershell
        $params = @{
@@ -537,7 +544,7 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
        Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
    ```
 	
-9. Review the applied settings and confirm the values are correct:
+10. Review the applied settings and confirm the values are correct:
 
    ```powershell
        (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
@@ -548,7 +555,7 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
     -  **EnableGroupCreation** → false
     -  **GroupCreationAllowedGroupId** → populated with a GUID
 
-10. Test the newly configured settings.
+11. Test the newly configured settings.
 
     1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
