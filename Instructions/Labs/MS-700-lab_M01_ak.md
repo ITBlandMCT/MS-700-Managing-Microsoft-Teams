@@ -91,7 +91,7 @@ Once you signed in to the VM, observe the start menu, and verify following appli
 
 - Microsoft Teams
 
-#### **3. Review Microsoft 365 tenant**
+#### **3. Review the Microsoft 365 tenant**
 
 Besides two VMs, you will also be provided with a Microsoft 365 tenant with the following highlights:
 
@@ -156,7 +156,7 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- Repeat the same steps as above and assign **Teams communication support engineer** role to **Allan Deyoung**.
 
-You have now successfully assigned the Teams admin roles.
+You have now successfully assigned the Teams admin roles:
 
 - Teams Administrator: Joni Sherman
 
@@ -172,7 +172,7 @@ In this task, you will check the license assignment of all users participating i
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
-2. Update **Alex Wilber’s** location to **Canada**
+2. Update **Alex Wilber’s** usage location to **Canada**
 
 	- On the **Users** > **Active users** page, select the name of **Alex Wilber**.
 
