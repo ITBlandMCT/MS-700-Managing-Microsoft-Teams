@@ -345,7 +345,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 4. Check the archived team
 
-	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Connect to the **CLIENT2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	2. In the left-side pane, next to **Teams and channels**, select the **...** icon, and then select **Your teams and channels**.
 
@@ -361,7 +361,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 6. Check the unarchived team
 
-	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Connect to the **CLIENT2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	2. In the left-hand navigation pane, next to **Teams and channels**, select the **...** icon, and then select **Your teams and channels**.
 
@@ -377,7 +377,7 @@ You have successfully archived a team and reviewed the limited functionality of 
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
 
-1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left-hand navigation pane, under **Teams and channels**, select **...** next to **Sales**, and then select **Delete team**.
 
@@ -397,7 +397,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 5. Check the restored group
 
-	1. Connect to **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Connect to **CLIENT2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	2. Confirm the **Sales** team appears in the list of teams. If the team does not appear, press **F5** to refresh the page.
 
@@ -412,7 +412,7 @@ You have successfully deleted a team via the Teams web client and restored it wi
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
 
 2. In the left-hand navigation pane, select **Entra ID** > **Groups** > **All groups**.
 
@@ -525,7 +525,7 @@ As Teams administrator of Contoso, you will create a private channel named **con
 
 6. Check the private channel
 
-	1. Connect to the **Client 2 VM** and browse to the **Teams Web Client** [(https://teams.microsoft.com)](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Connect to the **CLIENT2 VM** and browse to the **Teams Web Client** [(https://teams.microsoft.com)](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	2. In the left-hand navigation pane, under **Teams and channels**, expand the **Sales** team. Confirm the **Confidential sales** private channel appears with a lock icon.
 
@@ -673,7 +673,7 @@ In this exercise, you will test the configured policy settings on a client with 
 
 In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user (Joni Sherman).
 
-1. Connect to the **Client 2 VM** and browse to (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT2 VM** and browse to (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left-hand navigation pane, select **Chat** > **New message** icon.
 
@@ -687,7 +687,7 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 In this task, you will test the blocked app.
 
-1. Connect to the **Client 2 VM** and browse to (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT2 VM** and browse to (https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left-hand navigation select **Apps**.
 
