@@ -693,7 +693,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	1. On the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
 		- **Name**: Credit card numbers found
-		- **Description**: Basic rule for protecting credit card numbers forms being shared in Teams.
+		- **Description**: Basic rule for protecting credit card numbers from being shared in Teams.
 
 	2. In the **Conditions** section:
 		- Select **+ Add condition** and **Content contains**.
