@@ -258,57 +258,19 @@ You have successfully activated sensitivity labels for Microsoft 365 Groups and 
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
-2. Open up **Windows PowerShell** and **Run as Administrator**
+2. If the **Welcome to the new Microsoft Purview portal** screen appears, select **Get started**.
 
-3. Open a PowerShell prompt on your computer and run the following commands one at a time to install the required modules.
-```powershell
-    Install-Module Microsoft.Graph -Scope CurrentUser
-    Install-Module Microsoft.Graph.Beta -Scope CurrentUser
-```
+3. In the left navigation of the Microsoft Purview portal, select **Solutions** > **Information Protection** and then select **Sensitivity labels** from the menu.
 
-4. Connect to your tenant as **MOD Administrator**. A sign-in dialog appears with an account picker. Select **MOD Administrator** account and select **Continue**. If a permissions consent dialog appears, select the **Consent on behalf of your organization** checkbox, then select **Accept**.
-```powershell
-    Connect-MgGraph -Scopes "Directory.ReadWrite.All"
-```
-   
-5. Fetch the current group settings for the Microsoft Entra organization and display the current group settings.
-```powershell
-        	$grpUnifiedSetting = Get-MgBetaDirectorySetting -Search DisplayName:"Group.Unified"
-```
-6. Apply the new settings.
-```powershell
-        	$params = @{
-     		Values = @(
- 	    	@{
- 		Name = "EnableMIPLabels"
- 		Value = "True"
- 	    	}
-     		)
-		}
-
-		Update-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id -BodyParameter $params
-```
-7. Verify that the new value is present.
-```powershell
-        	$Setting = Get-MgBetaDirectorySetting -DirectorySettingId $grpUnifiedSetting.Id
-		$Setting.Values
-```
-
-8. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
-
-9. If the **Welcome to the new Microsoft Purview portal** screen appears, select **Get started**.
-
-10. In the left navigation of the Microsoft Purview portal, select **Solutions** > **Information Protection** and then select **Sensitivity labels** from the menu.
-
-11. If the following warning message appears, select **Turn on now** to activate content processing in Office online files:
+4. If the following warning message appears, select **Turn on now** to activate content processing in Office online files:
 
     *Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
-12. Select  **General** > **+ Create label in group**.
+5. Select  **General** > **+ Create label in group**.
 
-13. Enter the following:
+6. Enter the following:
    
 	a. On the **Provide basic details for this label** page, enter the following information, then select **Next**:
 	- **Name** : General
@@ -338,7 +300,7 @@ After activating sensitivity labels for groups, you will now create three sensit
     
 	h. Select **Create label** > **Done**.
 
-14. Configure the **Internal** sensitivity label.
+7. Configure the **Internal** sensitivity label.
 
 	In the left navigation pane, select **Information Protection** > **Sensitivity labels**. If the **Internal** label exists, select it and then select **Edit label**. Otherwise, select **+ Create** > **Label**.
 	
@@ -366,26 +328,26 @@ After activating sensitivity labels for groups, you will now create three sensit
 	* Select the **Add a watermark** checkbox, then select **Customize text** and enter **Internal use only** in the **Watermark text** field, then select **Save**.
     * Select the **Add a footer** checkbox,then select **Customize text** and enter **Internal use only** in the **Footer text** field, then select **Save**.
 
-15. In the **Teams meetings & chats** section, leave the settings as default and select **Next**.
+8. In the **Teams meetings & chats** section, leave the settings as default and select **Next**.
 
-16. In the **Auto-labeling for files and emails** section, leave the settings as default.
+9. In the **Auto-labeling for files and emails** section, leave the settings as default.
 	
-17. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**:
+10. In the **Groups & sites** section, under the **Define protection settings for groups and sites** page, select the following checkboxes, then select **Next**:
 	
 	* **Privacy and external user access** 
 	* **External sharing and Conditional Access** 
 
-18. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **None**, then select **Next**.
+11. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **None**, then select **Next**.
 
-19. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page, configure the following, then select **Next**:
+12. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page, configure the following, then select **Next**:
 	* Select **Control external sharing from labeled SharePoint sites** and select **Existing guests**
 	* Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites** and select  **Allow limited, web-only access** 
 
-20. Select **Create label** or **Save label**, then select **Done**.
+13. Select **Create label** or **Save label**, then select **Done**.
 
-21. If you created a new label, in the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
+14. If you created a new label, in the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
-22. Update the second sensitivity label - select **Confidential**, then select the ellipsis (⋮) menu and select **Create label in group**.
+15. Update the second sensitivity label - select **Confidential**, then select the ellipsis (⋮) menu and select **Create label in group**.
 	
 	a. In the **Label details** section, enter the following information, then select **Next**:
 	- **Name**: Confidential
@@ -430,7 +392,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 	l. In the **Finish** section, under **Next steps**, select **Don't create a policy yet**, then select **Done**.
 
 
-23. Publish sensitivity labels, after performing each step, select **Next** (if required).
+16. Publish sensitivity labels, after performing each step, select **Next** (if required).
 
 	a. In the left navigation pane, select **Information Protection** > **Policies** > **Label publishing policies**.
 
