@@ -172,7 +172,7 @@ In this task, you will check the license assignment of all users participating i
 
 1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
-2. Update **Alex Wilber’s** usage location to **Canada**
+2. Update **Alex Wilber’s** location to **Canada**
 
 	- On the **Users** > **Active users** page, select the name of **Alex Wilber**.
 
