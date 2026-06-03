@@ -77,9 +77,9 @@ The labs in this course have been prepared for a Microsoft Teams deployment at C
 
 The labs in this course will use two virtual machines:
 
-- Client 1 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client1 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
 
-- Client 2 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client2 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
 
 **Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
 
@@ -132,7 +132,7 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 1. Browse to the Microsoft 365 admin center (https://admin.microsoft.com/) and sign in as a **MOD Administrator**.
 
-	- Connect to the **Client 1 VM** with the credentials that have been provided to you.
+	- Connect to the **CLIENT1 VM** with the credentials that have been provided to you.
 
 	- Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -170,7 +170,7 @@ Proceed to the next task.
 
 In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
 
 2. Update **Alex Wilber’s** location to **Canada**
 
@@ -206,7 +206,7 @@ To perform these tasks, you will use Joni Sherman’s account (JoniS@_&lt;YourTe
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM**, browse to Teams admin center (https://admin.teams.microsoft.com) and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM**, browse to Teams admin center (https://admin.teams.microsoft.com) and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 	**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
@@ -226,11 +226,11 @@ In this task, you will install and connect with the Teams PowerShell module to y
 
 The Microsoft Graph PowerShell commands for this task are provided after the Microsoft PowerShell commands.
 
-1. Connect to the **Client 1 VM** with the VM credential that has been provided to you.
+1. Connect to the **CLIENT1 VM** with the VM credential that has been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the password for **Client 1VM**.
+	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. Note: You maybe prompted to input the password for **CLIENT1 VM**.
 
 	- Confirm the **User Account Control** window with **Yes**.
 
@@ -316,7 +316,7 @@ In this exercise, you will create a Microsoft 365 group from the Microsoft 365 a
 
 You will create a new Microsoft 365 Group named “IT-Department”, and then add the pilot members serving as a basis for your future teams and licensing.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -376,7 +376,7 @@ The new Microsoft 365 Group with the name “IT-Department” was successfully c
 
 To test the self-service capabilities of Teams, in this task, **Alex Wilber** will sign in to the Teams Desktop client, create a new team with the name **Teams Rollout** and add all members participating in the Teams evaluation project.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Select the **Teams** icon on the taskbar to start the Teams, desktop client.
 
@@ -413,7 +413,7 @@ You have successfully created a new team from the Teams desktop client added the
 
 In this task, **Lynne Robbins** will continue testing the self-service capabilities of Teams by using the Teams web client to create another team with the name **Sales**. She will also add **Alex Wilber** as a member.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -465,7 +465,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups** > **Active teams &amp; groups**.
 
@@ -557,7 +557,7 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
 
 11. Test the newly configured settings.
 
-    1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+    1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
     2. Test as **Alex Willber** from Teams desktop client, navigate to **Teams and channels** > **...** > **Your Teams and channels** > Select the dropdown button next to **Create team** and notice that both **Create team** and **Join team** options appear.
 
@@ -568,7 +568,7 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
 
 Revert the change for enabling users to create new teams.
 
-11. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
+11. Connect to the **CLIENT1 VM** where you have **Windows PowerShell** opened.  
     
 12. Load the existing directory setting:
 
@@ -658,7 +658,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 **Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **CLIENT2 VM** and open the **Teams desktop client** as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
 2. In the Teams desktop client, select **Teams and channels** from the left menu > **...** > **Your Teams and channels**.
 
@@ -692,7 +692,7 @@ You can remove the naming policy after the test. In the following task, you will
 
 To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation of the Teams admin center, select **Policy packages**.
 
