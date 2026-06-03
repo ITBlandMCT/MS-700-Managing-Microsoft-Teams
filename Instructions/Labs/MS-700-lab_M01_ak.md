@@ -658,7 +658,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 **Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
 2. In the Teams desktop client, select **Teams and channels** from the left menu > **...** > **Your Teams and channels**.
 
@@ -718,7 +718,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 	1. Back to **Policy packages** page.
 	2. Select **Frontline worker (default)** from the list again. 
-	3. Select **Frontline_worker** right from **Calling policy**.
+	3. Select **Frontline_worker** to the right of **Calling policy**.
 	4. Turn **On** the setting - **Prevent toll bypass and send calls through the PSTN**.
 	5. Update **Busy on busy during calls** to **On**.
 	6. Select **Save**.
@@ -730,7 +730,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 14. Select **Manage users** from the top menu.
 
-15. Type **Allan** into the search box, select **Add** right from **Allan Deyoung** and **Apply**.
+15. Type **Allan** into the search box, select **Add** to the right of **Allan Deyoung** and **Apply**.
 
 16. Check the policy assignment.
 
@@ -738,7 +738,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 
 	2. Select **Allan Deyoung** and select **Policies** tab.
 
-	3. You can see the **Frontline worker (Direct)** under policy package section.
+	3. You can see the **Frontline worker (Direct)** under the policy package section.
 
 You have successfully modified included policies from an existing policy package and assigned the package to a single user. This will help you assign the same set of policies to a group of users working in the same role or requiring the same access.
  
