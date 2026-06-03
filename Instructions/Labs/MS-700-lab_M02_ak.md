@@ -78,7 +78,7 @@ You have now reviewed guest access settings across different admin centers. You 
 
 Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **CLIENT1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
@@ -98,7 +98,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 **Note**: You will need an Outlook.com account for this exercise. If you don’t have an outlook account, you can create a new account from [**https://outlook.com**](https://outlook.com/).
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **CLIENT2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
 2. Add the guest to **Group_Afterwork_** team.
 
@@ -166,7 +166,7 @@ As a part of your system administrator role, you need to review access to resour
 
 4. Review the access review and approve the guest user. 
 
-	1. Connect to the **Client 2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com). You can open an InPrivate window.
+	1. Connect to the **CLIENT2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com). You can open an InPrivate window.
 
 	2. Check the email with the subject **Action required: Review group access**.
 
@@ -190,7 +190,7 @@ In this exercise, you will increase the security level in your organization by c
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that block documents that contain malware.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **MOD Administrator**.
 
 2. In left navigation of the Microsoft 365 Defender portal, expand **Email & Collaboration** section, select **Policies &amp; rules** > **Threat policies** > **Safe Attachments** in the **Policies** section.
 
@@ -210,7 +210,7 @@ Before deploying Microsoft Teams in your organization, you need to evaluate Micr
 
 You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Microsoft Entra ID, for being able to assign labels to teams.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT1 VM** with the credentials that have been provided to you.
 
 2. Open **Windows PowerShell** and run as Administrator.
 
@@ -258,7 +258,7 @@ You have successfully activated sensitivity labels for Microsoft 365 Groups and 
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
 
 2. Open up **Windows PowerShell** and **Run as Administrator**
 
@@ -296,7 +296,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 		$Setting.Values
 ```
 
-8. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
+8. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 9. If the **Welcome to the new Microsoft Purview portal** screen appears, select **Get started**.
 
@@ -468,7 +468,7 @@ Once the sensitivity labels are created and published, users can now assign them
 
 **Note:** It can take several minutes till the newly created sensitivity labels are available to users.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber**.
 
@@ -486,7 +486,7 @@ You have successfully applied a sensitivity label to an existing team. The confi
 
 In this task, you will try to add a guest user to an internal team.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber**.
 
@@ -504,7 +504,7 @@ You have successfully tested the sensitivity labels setting to prevent guest acc
 
 Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions** and then **Data lifecycle management**.
 
@@ -554,7 +554,7 @@ In this task, you have successfully created a new retention policy named **Sales
 
 After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions** > **Data lifecycle management**.
 
@@ -608,7 +608,7 @@ In this task, you will test the retention policy for deleting content from the *
 
 **Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policy’s effect.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber**.
 
@@ -632,7 +632,7 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 2. In the left navigation of the Microsoft Purview Portal, under **Solutions**, select **Data loss prevention**.
 
@@ -689,7 +689,7 @@ According to your organization’s compliance requirements, you need to implemen
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
+1. Connect to the **CLIENT1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **MOD Administrator**.
 
 2. In the left navigation of the Microsoft Purview Portal, under **Solutions**, select **Data loss prevention**.
 
@@ -775,7 +775,7 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 **Note:** It can take up to 24 hours for new DLP policies take effect. If this step does not work, continue with the lab and complete this task later as you progress through the lab.
 
-1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT2 VM** with the credentials that have been provided to you.
 
 2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber**.
 
@@ -797,9 +797,9 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 8. Select **Report** to notify the admin about the DLP policy violation. A message appears above the conversation stating **Blocked. You've reported this to your admin.**
 
-9. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+9. Connect to the **CLIENT1 VM** with the credentials that have been provided to you.
 
-10. On the **Client 1 VM**, verify you are still signed in to the **Microsoft Purview Portal**. If not, open Microsoft Edge and navigate to `https://purview.microsoft.com`.
+10. On the **CLIENT1 VM**, verify you are still signed in to the **Microsoft Purview Portal**. If not, open Microsoft Edge and navigate to `https://purview.microsoft.com`.
 
 11. Note this step is an optional step and not designed for users to complete in this lab. This step is meant to explain how to see the **DLP Policy Matches**. Previously, you would have been able to see it via the **Reports** page which has now been deprecated.
     
@@ -848,7 +848,7 @@ In this exercise, you will calculate the network requirements for Microsoft team
 
 Next, you will analyze your current bandwidth usage and test your network quality and connection to Microsoft Teams. You will also need to troubleshoot potential voice quality issues.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **CLIENT1 VM** with the credentials that have been provided to you.
 
 2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
@@ -948,7 +948,7 @@ In this lab, you have used Network Planner to estimate the Microsoft Teams impac
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
-1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
+1. Connect to the **CLIENT1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
 
 2. In the upper-right corner, select **Sign in**.
 
