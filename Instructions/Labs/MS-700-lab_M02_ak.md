@@ -214,43 +214,50 @@ You need to evaluate governance for Microsoft 365 Groups before deploying them i
 
 2. Open **Windows PowerShell** and run as Administrator.
 
-3. Install the **Microsoft Graph Beta** module if not already installed. Enter `Y` and press **Enter** to confirm installation from an untrusted repository.
-```powershell
-   Install-Module Microsoft.Graph.Beta
-```
+3. If you did not install the **Microsoft Graph Beta PowerShell module** earlier, install it now by running the following cmdlet. Enter `Y` and press **Enter** to confirm installation from an untrusted repository.
+   
+	```powershell
+ 	Install-Module Microsoft.Graph.Beta
+ 	```
+
 4. Connect to your Microsoft Entra ID tenant.
 
-Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
-```powershell
-   Connect-MgGraph -Scopes "Directory.ReadWrite.All"
-```
+	Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+
+	```powershell
+	Connect-MgGraph -Scopes "Directory.ReadWrite.All"
+	```
 
 5. Load the existing directory setting for unified groups:
    
-```powershell
+   ```powershell
    $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq (Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }).Id }
-```
+   ```
    
 6. Enable Microsoft Information Protection (MIP) label support in your configuration:
-```powershell
+
+   ```powershell
    $params = @{
        Values = @(
            @{ Name = "EnableMIPLabels"; Value = "True" }
        )
    }
    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
-```
+   ```
 
 7. To verify the new configuration, run the following cmdlet:
-```powershell
-   (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
-```
-Verify that **EnableMIPLabels** is now **True**.
+
+	```powershell
+	(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+	```
+
+	Verify that **EnableMIPLabels** is now **True**.
 
 8. Disconnect the current session from Microsoft Graph and close the PowerShell window:
-```powershell
-   Disconnect-MgGraph
-```
+
+	```powershell
+ 	Disconnect-MgGraph
+	```
 
 You have successfully activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
 
@@ -640,8 +647,8 @@ According to your organization’s compliance requirements, you need to implemen
 
 	3. On the **Review and finish**  page, review your settings, select **Submit** then **Done**.
 
-	 > [!NOTE]
-	 > After you select **Submit**, you may receive the following error: *"Client error: to block only people outside your organization, you must select the conditions 'content is shared with people outside my organization'."* Select **OK** to dismiss the message, then select **Cancel** to return to the **Data Loss Prevention** page and select **Confirm**.
+	   > [!NOTE]
+	   > After you select **Submit**, you may receive the following error: *"Client error: to block only people outside your organization, you must select the conditions 'content is shared with people outside my organization'."* Select **OK** to dismiss the message, then select **Cancel** to return to the **Data Loss Prevention** page and select **Confirm**.
 
 	4. On the **Data loss prevention** page, select **Refresh**. Leave the browser open.
 
@@ -780,14 +787,15 @@ In order to see the **DLP Policy Matches** users must perform the following:
 	```
 - Enable org customization by running the following command. This takes about 2–3 hours to replicate through the tenant.
 
-   ```powershell
-  Enable-OrganizationCustomization
-   ```
+	```powershell
+ 	Enable-OrganizationCustomization
+ 	```
 - Enable audit logging by running the following command. This takes about 24 hours to show as enabled.
 
-  ```powershell
-  Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
-  ```
+	```powershell
+	Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+	```
+
   > [!Note]
   > This explanation may require users to have the SPE5 tenant.
     
@@ -902,7 +910,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 8. On the report page, select the **Chart view** at the upper-right hand corner to display report results in different views.
 
-Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impacts on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
+	Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impacts on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
 
 In this lab, you have used Network Planner to estimate the Microsoft Teams impact on the bandwidth in your network infrastructure.
 
