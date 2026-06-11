@@ -234,17 +234,13 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 	- Confirm the **User Account Control** window with **Yes**.
 
-3. Install **Microsoft Teams PowerShell module**
+3. Install **Microsoft Teams PowerShell module** and **Microsoft Graph PowerShell module**:
 
 	- In the PowerShell window, enter the following cmdlets and press **Enter** after each:
 
 		- Microsoft Teams PowerShell: ```Install-Module -Name MicrosoftTeams```
-
-        or:
    
 		- Microsoft Graph PowerShell: ```Install-Module -Name Microsoft.Graph```
-   
-        and:
    
   		- Microsoft Graph Beta PowerShell: ```Install-Module -Name Microsoft.Graph.Beta```
    
@@ -508,7 +504,7 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
    to confirm installation from an untrusted repository.
 
    ```powershell
-    Install-Module Microsoft.Graph.Beta
+   Install-Module Microsoft.Graph.Beta
    ```
 
 6. Connect to Microsoft Graph with the required scopes. Sign in as **MOD Administrator** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
@@ -547,7 +543,7 @@ Please note: The **AzureADPreview** module is no longer functional on this tenan
 10. Review the applied settings and confirm the values are correct:
 
    ```powershell
-       (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+   (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
    ```
    
    Verify that the output shows:
@@ -573,7 +569,7 @@ Revert the change for enabling users to create new teams.
 12. Load the existing directory setting:
 
    ```powershell
-       $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
+   $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
    ```  
  
 13.	Reset group creation to allow all users:
